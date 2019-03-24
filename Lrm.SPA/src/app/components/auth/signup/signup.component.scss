@@ -1,0 +1,25 @@
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+.signup {
+    width: 25rem;
+    margin: 0 auto;
+    padding: 1.8rem;
+    &__form {
+        &-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+}
+
+hr {
+    margin-bottom: 1.8rem;
+}
+
+span {
+    font-size: 70%;
+}

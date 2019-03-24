@@ -1,0 +1,20 @@
+.newreleases {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding:4rem;
+    border-radius: 1rem;
+    background-image: linear-gradient(to right bottom, white, #f2d1a8);
+}
+
+.cards {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+
+

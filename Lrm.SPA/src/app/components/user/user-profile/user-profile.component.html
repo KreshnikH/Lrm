@@ -1,0 +1,22 @@
+<div class="user container">
+  <img class="user__photo" src = "{{ user.photoUrl }}">
+  <div class="user__data">
+    <div class="user__data-headers">
+        <p><strong>Username:</strong></p>
+        <p><strong>Age:</strong></p>
+        <p><strong>Gender:</strong></p>
+        <p><strong>City:</strong></p>
+        <p><strong>Country:</strong></p>
+    </div>
+    <div class="user__data-values">
+        <p>{{user.username}}</p>
+        <p>{{user.age}}</p>
+        <p>{{user.gender}}</p>
+        <p>{{user.city}}</p>
+        <p>{{user.country}}</p>
+    </div>
+  </div>
+  <div class="user__edit">
+      <button  (click)="onEditProfile()">Edit Profile</button>
+  </div>
+</div>

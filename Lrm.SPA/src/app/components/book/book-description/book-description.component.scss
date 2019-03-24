@@ -1,0 +1,40 @@
+
+.bk {
+    width:68rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    &__profile {
+        width:18rem;
+        border: 1px solid #BFBFBF;
+        margin: 0 0 auto;
+        &-data {
+            margin-left: 1rem;
+        }
+
+        &-image {
+            margin: 25px;
+            width: 50%;
+            height: 50%;
+        }
+    }
+
+    &__desc {
+        
+        width:47rem;
+        &-header {
+            display: flex;
+            justify-content: space-between;
+        }
+        p {
+            font-size:1rem;
+        }
+
+        textarea {
+            margin-top:1.5rem;
+            font-size: 90%;
+            border: 1px solid #BFBFBF;
+        }
+    }
+}
+

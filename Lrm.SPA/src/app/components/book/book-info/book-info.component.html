@@ -1,0 +1,29 @@
+
+ <div class="book">
+ 
+    <div class="book__cover">
+        <img class="book__cover-image" src="{{book.image}}" alt="{{book.name}}">
+        <div class="book__cover-rate">
+            <h6>Rate this book</h6>
+            <app-rating [rating]='4'></app-rating>
+        </div>
+    </div>
+    
+    <div class="book__data">
+        <div class="book__data-headers">
+            <h6>Title</h6>
+            <h6>Author/s</h6>
+            <h6>ISBN</h6>
+            <h6>Rating</h6>
+            <h6>Language</h6>
+        </div>
+        <div class="book__data-values">
+            <p><a  routerLink="/book/{{book.id}}">{{book.name}}</a></p>
+            <p><a  routerLink="/author">{{book.author}}</a></p>
+            <p>{{book.isbn}}</p>
+            <p>{{book.avg_rating}}</p>
+            <p>{{book.original_language}}</p>
+        </div>
+    </div>
+    
+</div>

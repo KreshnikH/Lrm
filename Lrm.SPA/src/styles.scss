@@ -1,0 +1,51 @@
+@import 'lrm.scss';
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '../node_modules/bootswatch/dist/journal/bootstrap.min.css';
+@import '../node_modules/font-awesome/css/font-awesome.min.css';
+
+* {
+    margin:0;
+    padding:0;
+}
+
+html {
+    box-sizing: border-box;
+    // font-size:62.5%; // 1rem = 10px
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: $font-family; 
+    & * ::selection {
+        background-color: $color-lighter-green;
+        color: white;
+    } 
+}
+
+a {
+    color: $color-darker-green;
+    &:hover {
+        color: $color-lighter-green;
+    }
+}
+
+button {
+    background-color: $color-lighter-green;
+    padding:0.7rem;
+    font-size:1rem;
+    color: $color-light-grey;
+    font-weight:700;
+    border: none;
+    border-radius:5%;
+    &:hover, &:active {
+        background-color: $color-darker-green;
+    }
+}
+
+
+
+
+

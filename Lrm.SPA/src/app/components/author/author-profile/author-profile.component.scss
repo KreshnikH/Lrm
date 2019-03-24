@@ -1,0 +1,26 @@
+
+.author {
+    width:60rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    &__photo {
+       width:15rem;
+       height:20rem;
+       
+    }
+
+    &__info {
+        width:40rem;
+
+        &--bio {
+            font-style: italic;
+            p {
+                margin-top: 2rem;
+                text-align: justify;
+            }
+        }
+    }
+}
+

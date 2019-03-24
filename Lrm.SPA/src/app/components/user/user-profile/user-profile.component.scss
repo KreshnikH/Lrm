@@ -1,0 +1,20 @@
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    &__photo {
+        height: 12rem;
+        border-radius: 50%;
+    }
+
+    &__data {
+        width:12rem;
+        margin-top: 1.8rem;
+        font-size: 1rem;
+        display:flex;
+        justify-content: space-between;
+    }
+    &__edit {
+        margin-top: 1.2rem;
+    }
+}

@@ -1,0 +1,36 @@
+.rating {
+    float:left;
+    &:not(:checked) {
+        & > input {
+            position:absolute;
+            clip:rect(0,0,0,0);
+        }
+        & > label {
+            float:right;
+            width:1em;
+            padding:0.1em;
+            overflow:hidden;
+            white-space:nowrap;
+            cursor:pointer;
+            font-size:200%;
+            line-height:1.2;
+            color:#ddd;
+            &:before {
+                content: '★ ';
+            }
+            &:hover, &:hover ~ label {
+                color: gold;
+            }
+            &:hover ~ input:checked ~ label {
+                color: #ea0;
+            }
+        }
+    }
+    & > input:checked ~ label {
+        color: #f70;
+        &:hover, &:hover ~ label {
+            color: #ea0;
+        }
+    }
+}
+
