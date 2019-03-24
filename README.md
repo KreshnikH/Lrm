@@ -17,4 +17,25 @@ Running the Client Side - Angular Framework
 
 Here is how the app will look:
 
-![alt text](https://github.com/KreshnikH/Lrm/images_of_app/Home1.png)
+
+![home](images_of_app/Home1.PNG)
+
+
+To log in use credentials
+username: 'admin@admin.com'
+password: 'admin'
+
+
+![loggedin](images_of_app/Mybooks1.PNG)
+
+
+Some other images of the App:
+
+
+![bookDescription](images_of_app/book1.PNG)
+
+
+![author](images_of_app/Author.PNG)
+
+
+![signup](images_of_app/Sign_Up.PNG)
