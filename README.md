@@ -1,7 +1,7 @@
 # Lrm
 
 'Libromania' is a social media site for book passionates. Currently is in development phase...
-REST api is created with Php Symfony 4, and for the Frontend 'Angular Framework' is used, with Bootstrap, Sass and Flexbox.
+REST api is created with Php Symfony 4, and for the Frontend 'Angular-7 Framework' is used, with Bootstrap, Sass and Flexbox.
 Database: MySql.
 
 Running the Server Side - Symfony Framework
