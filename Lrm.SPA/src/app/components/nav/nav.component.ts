@@ -44,40 +44,6 @@ export class NavComponent implements OnInit, OnDestroy {
         error => {
           console.log(<any>error);
         });
-    // .subscribe(
-    //   response => {
-    //     console.log(response);
-    //     this.router.navigate(['/mybooks']);
-    //     this.identity = response;
-
-    //     if (!this.identity.status) {
-
-    //         localStorage.setItem('identity', JSON.stringify(this.identity));
-    //         this.user.getHash = null;
-    //         this.userService.login(this.user).subscribe(
-    //             res => {
-    //                 this.token = res;
-    //                 if (!this.identity.status) {
-    //                 localStorage.setItem('token', JSON.stringify(this.token));
-    //                 this.router.navigate(['/mybooks']);
-    //               }
-    //             },
-    //             error => {
-    //               console.log(<any>error);
-    //             });
-    //     } else  {
-
-    //       if (this.identity.status === 'error') {
-    //         console.log('Login Failed!');
-    //       } else {
-    //           console.log('Unknown error!');
-    //       }
-
-    //     }
-    //   },
-    //   error => {
-    //     console.log(<any>error);
-    //   });
   }
 
 
