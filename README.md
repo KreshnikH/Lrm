@@ -15,4 +15,6 @@ Running the Client Side - Angular Framework
 4. Go to  'http://localhost:4200/' in your browser.
 
 
+Here is how the app will look:
 
+![alt text](https://github.com/KreshnikH/Lrm/images_of_app/Home1.png)
