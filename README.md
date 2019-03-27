@@ -14,7 +14,7 @@ Running the Server Side - Symfony Framework
 Running the Client Side - Angular Framework
 
 1. Run 'npm install' inside the Lrm.SPA folder
-2. Go to: "Lrm.API/src/app/environments/global.ts" and update to the API endpoint (currently: 'http://localhost/Lrm.API/web/app_dev.php').
+2. Go to: "Lrm.API/src/environments/global.ts" and update to the API endpoint (currently: 'http://localhost/Lrm.API/web/app_dev.php').
 3. Run 'npm start'.
 4. Go to  'http://localhost:4200/' in your browser.
 
