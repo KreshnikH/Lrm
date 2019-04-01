@@ -15,13 +15,14 @@ export class UserProfileComponent implements OnInit {
     this.user = {
         id: 1,
         username: 'Johnas',
+        email: 'Johnas@hotmail.com',
+        firstname: 'John',
+        lastname: 'Bolton',
         age: 30,
         gender: 'Male',
         created: 'April 28th 2011',
         lastActive: 'January 28th 2019',
         photoUrl: '../../assets/img/user-1.jpg',
-        city: 'London',
-        country: 'UK'
       };
   }
 

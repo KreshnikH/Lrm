@@ -1,19 +1,23 @@
 <div class="user container">
-  <img class="user__photo" src = "{{ user.photoUrl }}">
+  <img class="user__photo" src="{{user.photoUrl}}">
   <div class="user__data">
     <div class="user__data-headers">
+        <p><strong>First Name:</strong></p>
+        <p *ngIf="user.middlename"><strong>Middle Name:</strong></p>
+        <p><strong>Last Name:</strong></p>
         <p><strong>Username:</strong></p>
+        <p><strong>Email:</strong></p>
         <p><strong>Age:</strong></p>
         <p><strong>Gender:</strong></p>
-        <p><strong>City:</strong></p>
-        <p><strong>Country:</strong></p>
     </div>
     <div class="user__data-values">
+        <p>{{user.firstname}}</p>
+        <p *ngIf="user.middlename">{{user.middlename}}</p>
+        <p>{{user.lastname}}</p>
         <p>{{user.username}}</p>
+        <p>{{user.email}}</p>
         <p>{{user.age}}</p>
         <p>{{user.gender}}</p>
-        <p>{{user.city}}</p>
-        <p>{{user.country}}</p>
     </div>
   </div>
   <div class="user__edit">

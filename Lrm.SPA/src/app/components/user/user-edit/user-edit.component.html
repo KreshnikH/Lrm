@@ -1,6 +1,18 @@
 <div class="edituser">
   <form  [formGroup]="edituserForm" (ngSubmit)="onSave(edituserForm)" >
     <div class="form-group">
+      <h6>First Name</h6>
+      <input type="text" class="form-control" formControlName="firstname"/>
+    </div>
+    <div class="form-group">
+      <h6>Last Name</h6>
+      <input type="text" class="form-control" formControlName="lastname"/>
+    </div>
+    <div class="form-group">
+      <h6>Email</h6>
+      <input type="text" class="form-control" formControlName="email"/>
+    </div>
+    <div class="form-group">
       <h6>Username</h6>
       <input type="text" class="form-control" formControlName="username"/>
     </div>
@@ -11,14 +23,6 @@
     <div class="form-group">
       <h6 for="username">Gender</h6>
       <input type="text" class="form-control" formControlName="gender"/>
-    </div>
-    <div class="form-group">
-      <h6 for="username">City</h6>
-      <input type="text" class="form-control" formControlName="city"/>
-    </div>
-    <div class="form-group">
-      <h6 for="username">Country</h6>
-      <input type="text" class="form-control" formControlName="country"/>
     </div>
     <button type="submit">Save Data</button>
   </form>
