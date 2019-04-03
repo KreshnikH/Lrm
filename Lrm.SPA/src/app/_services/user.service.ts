@@ -16,7 +16,7 @@ export class UserService {
     headers = new HttpHeaders({'Content-Type': 'application/x-www-form-urlencoded'});
     constructor(private http: HttpClient) {
         this.url = GLOBAL.url;
-        this.identitySubject = new BehaviorSubject<Identity>(JSON.parse(localStorage.getItem('token')));
+        this.identitySubject = new BehaviorSubject<Identity>(JSON.parse(localStorage.getItem('identity')));
         this.identity = this.identitySubject.asObservable();
     }
 
