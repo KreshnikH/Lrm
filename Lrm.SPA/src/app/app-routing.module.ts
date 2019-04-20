@@ -20,7 +20,7 @@ const routes: Routes = [
       {path: 'user-edit', component: UserEditComponent},
       {path: 'mybooks', component: MybooksComponent},
       {path: 'book/:id', component: BookDescriptionComponent },
-      {path: 'author', component: AuthorProfileComponent },
+      {path: 'authors/:id', component: AuthorProfileComponent },
     ]
   },
   { path: 'signup', component: SignupComponent},

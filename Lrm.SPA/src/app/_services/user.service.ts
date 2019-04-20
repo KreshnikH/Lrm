@@ -5,6 +5,7 @@ import { map, catchError } from 'rxjs/operators';
 import {GLOBAL} from '../../environments/global';
 import { Identity } from '../_models/Identity';
 import {  JwtHelperService } from '@auth0/angular-jwt';
+import { User } from '../_models/User';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
@@ -12,10 +13,12 @@ export class UserService {
     private identitySubject: BehaviorSubject<Identity>;
     public identity: Observable<Identity>;
     public url: string;
+    public mock_url: string;
     public token: any;
     headers = new HttpHeaders({'Content-Type': 'application/x-www-form-urlencoded'});
     constructor(private http: HttpClient) {
         this.url = GLOBAL.url;
+        this.mock_url = GLOBAL.mock_url;
         this.identitySubject = new BehaviorSubject<Identity>(JSON.parse(localStorage.getItem('identity')));
         this.identity = this.identitySubject.asObservable();
     }
@@ -54,5 +57,9 @@ export class UserService {
         localStorage.removeItem('identity');
         localStorage.removeItem('token');
         this.identitySubject.next(null);
+    }
+
+    getUser(id) {
+        return this.http.get<User>(`${this.mock_url}/users/` + id);
     }
 }

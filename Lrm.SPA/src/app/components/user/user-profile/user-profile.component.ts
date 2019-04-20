@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../../../_models/User';
 import { Router } from '@angular/router';
+import { UserService } from '../../../_services/user.service';
 
 @Component({
   selector: 'app-user-profile',
@@ -9,21 +10,14 @@ import { Router } from '@angular/router';
 })
 export class UserProfileComponent implements OnInit {
   user: User;
-  constructor(private router: Router) { }
+  constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit() {
-    this.user = {
-        id: 1,
-        username: 'Johnas',
-        email: 'Johnas@hotmail.com',
-        firstname: 'John',
-        lastname: 'Bolton',
-        age: 30,
-        gender: 'Male',
-        created: 'April 28th 2011',
-        lastActive: 'January 28th 2019',
-        photoUrl: '../../assets/img/user-1.jpg',
-      };
+    this.userService.getUser('1').subscribe(
+      (user) => {
+        this.user = user;
+      }
+    );
   }
 
   onEditProfile() {
