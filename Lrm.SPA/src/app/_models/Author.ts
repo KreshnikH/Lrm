@@ -1,5 +1,6 @@
 export interface Author {
     id: number;
-    first_name: string;
-    last_name: string;
+    name: string;
+    image?: string;
+    shortbio: string;
 }

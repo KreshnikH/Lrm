@@ -1,18 +1,18 @@
 <div class="container">
   <div class="bk">
     <div class="bk__profile">
-        <img class="bk__profile-image" src="{{book.image}}" alt="{{book.name}}" />
+        <img class="bk__profile-image" src="{{book?.image}}" alt="{{book?.name}}" />
         <div class="bk__profile-data">
-            <div><strong>By: </strong><span><a routerLink="/author">{{book.author}}</a></span><br><br></div>
-            <div><strong>ISBN</strong><p>{{book.isbn}}</p></div>
-            <div><strong>Language</strong><p>{{book.original_language}}</p></div>
-            <div><strong>Nr of Pages</strong><p>{{book.no_pages}}</p></div><div><strong>Average Rating</strong><p>{{book.avg_rating}}</p></div>
-            <div><strong>Place</strong><p>{{book.publish_place}}</p></div>
+            <div><strong>By: </strong><span><a routerLink="/authors/1">{{book?.author}}</a></span><br><br></div>
+            <div><strong>ISBN</strong><p>{{book?.isbn}}</p></div>
+            <div><strong>Language</strong><p>{{book?.original_language}}</p></div>
+            <div><strong>Nr of Pages</strong><p>{{book?.no_pages}}</p></div><div><strong>Average Rating</strong><p>{{book?.avg_rating}}</p></div>
+            <div><strong>Place</strong><p>{{book?.publish_place}}</p></div>
         </div>
     </div>
     <div class="bk__desc">
         <h5 class="bk__desc-header">Description <a routerLink="/mybooks">Back to My Books</a></h5>
-        <textarea class="form-control" rows="12" >{{book.description}}</textarea> 
+        <textarea class="form-control" rows="12" >{{book?.description}}</textarea> 
     </div>
   </div>
 </div>

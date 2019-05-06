@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { AuthorService } from '../../../_services/author.service';
+import { Author } from '../../../_models/Author';
 
 @Component({
   selector: 'app-author-profile',
@@ -7,19 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthorProfileComponent implements OnInit {
 
-  author: any;
-  constructor() { }
+  author: Author;
+  constructor(private route: ActivatedRoute, private authorService: AuthorService ) { }
 
   ngOnInit() {
     this.getAuthor();
   }
 
   getAuthor() {
-   this.author = {
-    name: 'John Warilow',
-    image: '../../../../assets/img/John-Warrillow.jpg',
-    shortbio: 'John Warrillow is the founder of The Value Builder System, a company that helps business owners improve the value of their company. John is the author of the bestselling book Built to Sell: Creating a Business That Can Thrive Without You, which was recognized by both Fortune and Inc Magazine as one of the best business books of 2011. Built to Sell has been translated into four languages. John\'s new book, The Automatic Customer: Creating A Subscription Business In Any Industry was released by Random House in February 2015.'
-  };
+      const id = + this.route.snapshot.paramMap.get('id');
+      this.authorService.getAuthor(id).subscribe(
+        (author) => {
+          this.author = author;
+         }
+      );
   }
 
 }
