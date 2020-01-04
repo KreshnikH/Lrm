@@ -12,11 +12,9 @@ export class AuthorService {
 
   constructor(private http: HttpClient) {
     this.url = GLOBAL.mock_url;
-   }
+  }
 
-   getAuthor(id) {
+   getAuthor(id: any) {
     return this.http.get<Author>(`${this.url}/authors/` + id);
-   }
-
-
+  }
 }

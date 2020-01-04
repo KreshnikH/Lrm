@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { throwError, Observable, BehaviorSubject} from 'rxjs';
-import { map, catchError } from 'rxjs/operators';
-import {GLOBAL} from '../../environments/global';
+import { Observable, BehaviorSubject} from 'rxjs';
+import { map } from 'rxjs/operators';
+import { GLOBAL } from '../../environments/global';
 import { Identity } from '../_models/Identity';
-import {  JwtHelperService } from '@auth0/angular-jwt';
+import { JwtHelperService } from '@auth0/angular-jwt';
 import { User } from '../_models/User';
 
 @Injectable({ providedIn: 'root' })
@@ -27,8 +27,12 @@ export class UserService {
      this.token = JSON.parse(localStorage.getItem('token'));
         return !this.jwtHelper.isTokenExpired(this.token);
     }
-    public getIdentity(): Identity {
+    getIdentity(): Identity {
         return this.identitySubject.value;
+    }
+
+    getId(): number {
+        return this.getIdentity().sub;
     }
 
     getToken() {
@@ -53,13 +57,18 @@ export class UserService {
         }));
 
     }
+
     logout() {
         localStorage.removeItem('identity');
         localStorage.removeItem('token');
         this.identitySubject.next(null);
     }
 
-    getUser(id) {
-        return this.http.get<User>(`${this.mock_url}/users/` + id);
+    getUser(id: any) {
+        return this.http.get<User>(`${this.mock_url}/users/` + this.getId());
+    }
+
+    updateCurrentUser(user: any) {
+       return this.http.patch<any>(`${this.mock_url}/users/` + this.getId(), user );
     }
 }

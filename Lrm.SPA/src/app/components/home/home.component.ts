@@ -9,18 +9,20 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, OnDestroy {
+
   identity: Identity;
   identitySubscription: Subscription;
+
   constructor(private userService: UserService) {
     this.identitySubscription = this.userService.identity.subscribe(user => {
-      this.identity = user;
+    this.identity = user;
   });
-   }
+}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   ngOnDestroy() {
     this.identitySubscription.unsubscribe();
 }
+
 }

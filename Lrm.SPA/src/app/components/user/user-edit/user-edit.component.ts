@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { UserService } from 'src/app/_services/user.service';
 
 @Component({
   selector: 'app-user-edit',
@@ -8,7 +10,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class UserEditComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   edituserForm: FormGroup;
   ngOnInit() {
@@ -23,7 +25,10 @@ export class UserEditComponent implements OnInit {
   }
 
   onSave(form: FormGroup) {
-    console.log(form.value);
+    this.userService.updateCurrentUser(form.value).subscribe(data => {
+      console.log(form.value);
+    });
+
   }
 
 }

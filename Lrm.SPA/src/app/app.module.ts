@@ -52,7 +52,7 @@ import { JwtInterceptor } from './_helpers/jwt.interceptor';
     BsDropdownModule.forRoot()
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
+    // { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

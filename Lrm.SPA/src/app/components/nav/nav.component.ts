@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Router, ActivatedRoute, Params } from '@angular/router';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/_services/user.service';
 import { Identity } from '../../_models/Identity';
 import { Subscription } from 'rxjs';
@@ -13,19 +13,20 @@ import { first } from 'rxjs/operators';
 })
 export class NavComponent implements OnInit, OnDestroy {
 
-  public user: any;
+  user: any;
   identity: Identity;
   token: any;
   identitySubscription: Subscription;
   constructor(private router: Router, private userService: UserService) {
-   this.identity = this.userService.getIdentity();
-   this.token = this.userService.getToken();
-   this.identitySubscription = this.userService.identity.subscribe(user => {
-    this.identity = user;
-});
   }
 
   ngOnInit() {
+      this.identity = this.userService.getIdentity();
+      this.token = this.userService.getToken();
+      this.identitySubscription = this.userService.identity.subscribe(user => {
+      this.identity = user;
+    });
+
     this.user = {
       'email': '',
       'password': '',
