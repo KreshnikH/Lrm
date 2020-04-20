@@ -5,7 +5,7 @@ import { BookService } from '../../../_services/book.service';
 
 
 @Component({
-  selector: 'app-book-description',
+  selector: 'lrm-book-description',
   templateUrl: './book-description.component.html',
   styleUrls: ['./book-description.component.scss']
 })

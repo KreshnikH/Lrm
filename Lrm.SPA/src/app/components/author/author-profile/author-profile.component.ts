@@ -4,7 +4,7 @@ import { AuthorService } from '../../../_services/author.service';
 import { Author } from '../../../_models/Author';
 
 @Component({
-  selector: 'app-author-profile',
+  selector: 'lrm-author-profile',
   templateUrl: './author-profile.component.html',
   styleUrls: ['./author-profile.component.scss']
 })

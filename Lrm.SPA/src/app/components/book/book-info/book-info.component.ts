@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { BookProfile } from '../../../_models/BookProfile';
 
 @Component({
-  selector: 'app-book-info',
+  selector: 'lrm-book-info',
   templateUrl: './book-info.component.html',
   styleUrls: ['./book-info.component.scss']
 })

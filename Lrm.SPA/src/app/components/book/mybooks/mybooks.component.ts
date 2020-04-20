@@ -4,7 +4,7 @@ import { BookProfile } from '../../../_models/BookProfile';
 
 
 @Component({
-  selector: 'app-mybooks',
+  selector: 'lrm-mybooks',
   templateUrl: './mybooks.component.html',
   styleUrls: ['./mybooks.component.scss']
 })

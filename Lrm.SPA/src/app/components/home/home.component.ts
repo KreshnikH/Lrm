@@ -4,7 +4,7 @@ import { Identity } from '../../_models/Identity';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-home',
+  selector: 'lrm-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })

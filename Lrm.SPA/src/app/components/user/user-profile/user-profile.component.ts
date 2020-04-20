@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { UserService } from '../../../_services/user.service';
 
 @Component({
-  selector: 'app-user-profile',
+  selector: 'lrm-user-profile',
   templateUrl: './user-profile.component.html',
   styleUrls: ['./user-profile.component.scss']
 })

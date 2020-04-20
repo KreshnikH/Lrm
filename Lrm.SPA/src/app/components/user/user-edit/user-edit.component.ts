@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { UserService } from 'src/app/_services/user.service';
 
 @Component({
-  selector: 'app-user-edit',
+  selector: 'lrm-user-edit',
   templateUrl: './user-edit.component.html',
   styleUrls: ['./user-edit.component.scss']
 })

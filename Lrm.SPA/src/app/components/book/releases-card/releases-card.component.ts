@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-releases-card',
+  selector: 'lrm-releases-card',
   templateUrl: './releases-card.component.html',
   styleUrls: ['./releases-card.component.scss']
 })

@@ -7,7 +7,7 @@ import { first } from 'rxjs/operators';
 
 
 @Component({
-  selector: 'app-nav',
+  selector: 'lrm-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })

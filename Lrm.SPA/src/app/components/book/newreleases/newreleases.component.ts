@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 import { BookService } from '../../../_services/book.service';
 
 @Component({
-  selector: 'app-newreleases',
+  selector: 'lrm-newreleases',
   templateUrl: './newreleases.component.html',
   styleUrls: ['./newreleases.component.scss']
 })
